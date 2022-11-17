@@ -1,0 +1,20 @@
+
+@media print
+{
+    @page
+    {
+        margin-top: 1cm;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 1.89cm;
+    }
+
+    #resume-template #downloadBtn
+    {
+        display: none;
+        visibility: hidden;
+        /* color: transparent;
+        background: transparent;
+        border: transparent; */
+    }
+}

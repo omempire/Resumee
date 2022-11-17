@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS | Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/ResumeTemplate/style.css">
+
+    <link rel="stylesheet" media="print" href="/ResumeTemplate/print.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png">
+
+    <title>Resume Template Simple</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="container-fluid" id="header">
+        <h1 class="text-center my-2">Resume Builder</h1>
+        <p class="text-center">Software Engineering Project</p>
+    </div>
+
+    <!-- BODY -->
+    <div id="ResumeTemplateMain" class="container-fluid center">
+
+        <div class="row col-md-12 flex">
+
+            <!-- SECTION I -->
+            <div class="container-fluid col-md-8" id="resume-form">
+
+                <div id="colFirst" class="container-fluid center">
+
+
+                    <!-- Personal Details -->
+                    <div id="personalDetails">
+
+                        <h3 class="mt-4 mb-4">Personal Information</h3>
+
+                        <div class="form-group">
+                            <label for="nameField">Your Name : </label>
+                            <input type="text" id="nameField" placeholder="Enter Your Name" class="form-control">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <!-- emailField -->
+                            <label for="emailField">Your Email : </label>
+                            <input type="email" id="emailField" placeholder="Enter Your Email" class="form-control">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="contactField">Your Contact : </label>
+                            <input type="text" id="contactField" placeholder="Enter Your Contact" class="form-control">
+                        </div>
+
+
+                        <!-- BUTTONS -->
+                        <div class="container-fluid text-center m-5">
+                            <button onclick="document.getElementById('personalDetails').style.display = 'none';
+                                             document.getElementById('educationDetails').style.display = 'block';"
+                                id="nextBtn" class="btn btn-danger btn-lg">Next</button>
+                        </div>
+                    </div>
+
+
+                    <!-- Education Details -->
+                    <div style="display: none;" id="educationDetails">
+
+                        <h3 class="mt-4 mb-4">Education Information</h3>
+
+                        <!-- College Details -->
+                        <div class="form-group">
+                            <label for="clgEdu">College Name : </label>
+                            <input type="text" id="clgEdu" placeholder="Enter Your College Name" class="form-control">
+
+                            <label for="clgBranchEdu" class="mt-2">Branch Name</label>
+                            <input type="text" id="clgBranchEdu" placeholder="Enter Your Branch" class="form-control">
+
+                            <label for="clgYearEdu" class="mt-2">Graduation Year</label>
+                            <input oninput="document.getElementById('clgYearSec').textContent = this.value;" type="text"
+                                id="clgYearEdu" placeholder="Enter Graduation Year" class="form-control">
+
+                            <label for="clgSemEdu" class="mt-2">Current Semester or Graduate</label>
+                            <input type="text" id="clgSemEdu" placeholder="Enter Semester or Graduate"
+                                class="form-control">
+
+                            <label for="clgCGPAEdu" class="mt-2">CGPA</label>
+                            <input type="text" id="clgCGPAEdu" placeholder="Current CGPA" class="form-control">
+
+                            <label for="clgCityEdu" class="mt-2">Graduation City</label>
+                            <input type="text" id="clgCityEdu" placeholder="Enter Your College City"
+                                class="form-control">
+                        </div>
+
+                        <!-- HSC Details -->
+                        <div class="form-group mt-5">
+                            <label for="hscEdu" class="mt-2">HSC College Name : </label>
+                            <input
+                                oninput="document.getElementById('hscSec').textContent = this.value;  document.getElementById('hscSec').style.textTransform = 'Uppercase';"
+                                type="text" id="hscEdu" placeholder="Enter Your HSC College Name" class="form-control">
+
+                            <label for="hscYearEdu" class="mt-2">Graduation Year</label>
+                            <input oninput="document.getElementById('hscYear').textContent = this.value;" type="text"
+                                id="hscYearEdu" placeholder="Enter HSC College Year" class="form-control">
+
+                            <label for="hscCGPAEdu" class="mt-2">CGPA</label>
+                            <input
+                                oninput="document.getElementById('hscCGPA').textContent = 'Percentage :- ' + this.value + '%';"
+                                type="text" id="hscCGPAEdu" placeholder="HSC CGPA" class="form-control">
+
+                            <label for="hscCityEdu" class="mt-2">Graduation City</label>
+                            <input oninput="document.getElementById('hscCity').textContent = this.value;" type="text"
+                                id="hscCityEdu" placeholder="Enter Your HSC College City" class="form-control">
+                        </div>
+
+                        <!-- SSC Details -->
+                        <div class="form-group mt-5">
+                            <label for="sscEdu" class="mt-2">SSC College Name : </label>
+                            <input
+                                oninput="document.getElementById('sscSec').textContent = this.value; document.getElementById('sscSec').style.textTransform = 'Uppercase';"
+                                type="text" id="sscEdu" placeholder="Enter Your College Name" class="form-control">
+
+                            <label for="sscYearEdu" class="mt-2">Graduation Year</label>
+                            <input oninput="document.getElementById('sscYear').textContent = this.value;" type="text"
+                                id="sscYearEdu" placeholder="Enter SSC College Year" class="form-control">
+
+                            <label for="sscCGPAEdu" class="mt-2">CGPA</label>
+                            <input
+                                oninput="document.getElementById('sscCGPA').textContent = 'Percentage :- ' + this.value + '%';"
+                                type="text" id="sscCGPAEdu" placeholder="SSC CGPA" class="form-control">
+
+                            <label for="sscCityEdu" class="mt-2">Graduation City</label>
+                            <input oninput="document.getElementById('sscCity').textContent = this.value;" type="text"
+                                id="sscCityEdu" placeholder="Enter Your SSC College City" class="form-control">
+                        </div>
+
+
+                        <!-- BUTTONS -->
+                        <div class="container-fluid text-center m-5">
+                            <button onclick="document.getElementById('personalDetails').style.display = 'block';
+                            document.getElementById('educationDetails').style.display = 'none';" id="prevBtn"
+                                style="float: left;" class="btn btn-danger btn-lg">Prev</button>
+                            <button onclick="document.getElementById('links').style.display = 'block';
+                            document.getElementById('educationDetails').style.display = 'none';" id="nextBtn"
+                                class="btn btn-danger btn-lg">Next</button>
+                        </div>
+                    </div>
+
+
+                    <!-- LINKS -->
+                    <div style="display: none;" id="links">
+
+                        <h3 class="mt-4 mb-4">Links</h3>
+
+                        <div class="form-group">
+                            <label for="githubLink">Github : </label>
+                            <input oninput="document.getElementById('statGithub').textContent = this.value;" type="url"
+                                id="gitNameLink" placeholder="GitHub Profile Name" class="form-control mt-2 mb-2">
+                            <input oninput="document.getElementById('statGithub').href = this.value;" type="url"
+                                id="githubLink" placeholder="GitHub Profile Link" class="form-control">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <!-- emailField -->
+                            <label for="linkedinLink">LinkedIn : </label>
+                            <input oninput="document.getElementById('statLinkedin').textContent = this.value;"
+                                type="url" id="linkedinNameLink" placeholder="LinkedIn Profile Name"
+                                class="form-control mt-2 mb-2">
+                            <input oninput="document.getElementById('statLinkedin').href = this.value;" type="url"
+                                id="linkedinLink" placeholder="LinkedIn Profile Link" class="form-control">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="codechefLink">CodeChef : </label>
+                            <input oninput="document.getElementById('statCodechef').textContent = this.value;"
+                                type="url" id="codechefNameLink" placeholder="CodeChef Profile Name"
+                                class="form-control mt-2 mb-2">
+                            <input oninput="document.getElementById('statCodechef').href = this.value;" type="url"
+                                id="codechefLink" placeholder="CodeChef Profile Link" class="form-control">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="codeforcesLink">Codeforces : </label>
+                            <input oninput="document.getElementById('statCodeforces').textContent = this.value;"
+                                type="url" id="codeforcesNameLink" placeholder="CodeForces Profile Name"
+                                class="form-control mt-2 mb-2">
+                            <input oninput="document.getElementById('statCodeforces').href = this.value;" type="url"
+                                id="codeforcesLink" placeholder="CodeForces Profile Link" class="form-control">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="leetcodeLink">LeetCode : </label>
+                            <input oninput="document.getElementById('statLeetCode').textContent = this.value;"
+                                type="url" id="leetcodeNameLink" placeholder="LeetCode Profile Name"
+                                class="form-control mt-2 mb-2">
+                            <input oninput="document.getElementById('statLeetCode').href = this.value" type="url"
+                                id="leetcodeLink" placeholder="LeetCode Profile Link" class="form-control">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="portfolioLink">PortFolio : </label>
+                            <input oninput="document.getElementById('statPortfolio').textContent = this.value;"
+                                type="url" id="portfolioNameLink" placeholder="PortFolio Name"
+                                class="form-control mt-2 mb-2">
+                            <input oninput="document.getElementById('statPortfolio').href = this.value;" type="url"
+                                id="portfolioLink" placeholder="PortFolio Link" class="form-control">
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="container-fluid text-center m-5">
+                            <button onclick="document.getElementById('educationDetails').style.display = 'block';
+                            document.getElementById('links').style.display = 'none';" id="prevBtn" style="float: left;"
+                                class="btn btn-danger btn-lg">Prev</button>
+                            <button onclick="document.getElementById('skills').style.display = 'block';
+                                             document.getElementById('links').style.display = 'none';" id="nextBtn"
+                                class="btn btn-danger btn-lg">Next</button>
+                        </div>
+                    </div>
+
+
+                    <!-- SKILLS -->
+                    <div style="display: none;" id="skills">
+
+                        <h3 class="mt-4 mb-4">Skills</h3>
+
+                        <!-- Programming Details -->
+                        <div class="form-group">
+                            <label class="mb-1" for="programmingSkill0">Programming : </label>
+                            <div id="programmingSec">
+                                <input oninput="document.getElementById('prg0').textContent = this.value;" type="text"
+                                    id="programmingSkill0" placeholder="Programming Languages" class="form-control">
+                            </div>
+                            <button onclick="moreSkill();" id="skillBtn"
+                                class="text-right btn btn-secondary btn-sm mt-2">Add</button>
+                        </div>
+
+                        <!-- Web Technologies Details -->
+                        <div class="form-group mt-4">
+                            <label class="mb-1" for="webTechSkill0">Web Technologies : </label>
+                            <div id="webTechSec">
+                                <input oninput="document.getElementById('web0').textContent = this.value;" type="text"
+                                    id="webTechSkill0" placeholder="Web Technologies" class="form-control">
+                            </div>
+                            <button onclick="moreWebTech();" id="skillBtn"
+                                class="text-right btn btn-secondary btn-sm mt-2">Add</button>
+                        </div>
+
+                        <!-- Tools Details -->
+                        <div class="form-group mt-4">
+                            <label class="mb-1" for="toolSkill0">Tools : </label>
+                            <div id="toolSec">
+                                <input oninput="document.getElementById('tool0').textContent = this.value;" type="text"
+                                    id="toolSkill0" placeholder="Software and Tools" class="form-control">
+                            </div>
+                            <button onclick="moreTools();" id="skillBtn"
+                                class="text-right btn btn-secondary btn-sm mt-2">Add</button>
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="container-fluid text-center m-5">
+                            <button onclick="document.getElementById('links').style.display = 'block';
+                            document.getElementById('skills').style.display = 'none';" id="prevBtn"
+                                style="float: left;" class="btn btn-danger btn-lg">Prev</button>
+                            <button onclick="document.getElementById('coursesDetails').style.display = 'block';
+                            document.getElementById('skills').style.display = 'none';" id="nextBtn"
+                                class="btn btn-danger btn-lg">Next</button>
+                        </div>
+                    </div>
+
+
+                    <!-- COURSES -->
+                    <div style="display: none;" id="coursesDetails">
+
+                        <h3 class="mt-4 mb-4">Courses</h3>
+
+                        <!-- College Details -->
+                        <div class="form-group">
+                            <label class="mb-1" for="infoCourses">Undergraduate Courses: </label>
+                            <input type="text" id="infoCourses" value="Undergraduate" disabled
+                                placeholder="Programming Languages" class="form-control">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label class="mb-1" for="takenCourses0">Courses : </label>
+                            <div id="courSec">
+                                <input oninput="document.getElementById('course0').textContent = this.value;"
+                                    type="text" id="takenCourses0" placeholder="Courses Completed" class="form-control">
+                            </div>
+                            <button onclick="moreCourses();" id="skillBtn"
+                                class="text-right btn btn-secondary btn-sm mt-2">Add</button>
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="container-fluid text-center m-5">
+                            <button onclick="document.getElementById('skills').style.display = 'block';
+                            document.getElementById('coursesDetails').style.display = 'none';" id="prevBtn"
+                                style="float: left;" class="btn btn-danger btn-lg">Prev</button>
+                            <button onclick="document.getElementById('expDetails').style.display = 'block';
+                            document.getElementById('coursesDetails').style.display = 'none';" id="nextBtn"
+                                class="btn btn-danger btn-lg">Next</button>
+                        </div>
+                    </div>
+
+
+                    <!-- EXPERIENCE -->
+                    <div style="display: none;" id="expDetails">
+
+                        <h3 class="mt-4 mb-4">Experience</h3>
+
+                        <div class="form-group">
+                            <label for="companyExp">Company Name : </label>
+                            <input
+                                oninput="document.getElementById('cmpSec').textContent = this.value + ' | '; document.getElementById('cmpSec').style.textTransform = 'Uppercase';"
+                                type="text" id="companyExp" placeholder="Company Experience" class="form-control">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="roleExp">Position Title: </label>
+                            <input
+                                oninput="document.getElementById('cmpRoleSec').textContent = this.value; document.getElementById('cmpRoleSec').style.textTransform = 'Uppercase'; document.getElementById('cmpRoleSec').href = 'https://www.google.co.in';"
+                                type="text" id="roleExp" placeholder="Position Experience Title" class="form-control">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="tenureExp">Experience Tenure</label>
+                            <input oninput="document.getElementById('cmpYearSec').textContent = this.value + ' | ';"
+                                type="text" id="tenureExp" placeholder="Tenure Of Experience" class="form-control">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="locExp">Location : </label>
+                            <input oninput="document.getElementById('cmpLocSec').textContent = this.value;" type="text"
+                                id="locExp" placeholder="Location At" class="form-control">
+                        </div>
+
+                        <div class="form-group mt-4 mb-5">
+                            <label for="desExp0">Experience Description : </label>
+                            <div id="descriptionExp">
+                                <input oninput="document.getElementById('expA0').textContent = this.value;" type="text"
+                                    id="desExp0" placeholder="Some Description" class="form-control">
+                            </div>
+                            <div style="width: 1000px;" class="text-center mb-5">
+                                <button onclick="moreCmp();" id="skillBtn" style="float: left;"
+                                    class="btn btn-secondary btn-sm mt-2">Add</button>
+                                <button
+                                    onclick="document.getElementById('newSec').style.display = 'block'; this.style.display = 'none';"
+                                    id="addSec" class="btn btn-warning btn-md mt-2">+1 Experience</button>
+                            </div>
+                        </div>
+
+                        <!-- NAYA WALA HAI -->
+                        <div id="newSec" style="display: none;" class="mt-5 mb-5">
+                            <div class="form-group mt-5">
+                                <label for="companyExp1">Company Name : </label>
+                                <input
+                                    oninput="document.getElementById('cmpSec1').textContent = this.value + ' | '; document.getElementById('cmpSec1').style.textTransform = 'Uppercase';"
+                                    type="text" id="companyExp1" placeholder="Company Experience" class="form-control">
+                            </div>
+
+                            <div class="form-group mt-4">
+                                <label for="roleExp1">Position Title: </label>
+                                <input
+                                    oninput="document.getElementById('cmpRoleSec1').textContent = this.value; document.getElementById('cmpRoleSec1').style.textTransform = 'Uppercase'; document.getElementById('cmpRoleSec1').href = 'https://www.google.co.in';"
+                                    type="text" id="roleExp1" placeholder="Position Experience Title"
+                                    class="form-control">
+                            </div>
+
+                            <div class="form-group mt-4">
+                                <label for="tenureExp1">Experience Tenure</label>
+                                <input
+                                    oninput="document.getElementById('cmpYearSec1').textContent = this.value + ' | ';"
+                                    type="text" id="tenureExp1" placeholder="Tenure Of Experience" class="form-control">
+                            </div>
+
+                            <div class="form-group mt-4">
+                                <label for="locExp1">Location : </label>
+                                <input oninput="document.getElementById('cmpLocSec1').textContent = this.value;"
+                                    type="text" id="locExp1" placeholder="Location At" class="form-control">
+                            </div>
+
+                            <div class="form-group mt-4">
+                                <label for="desExp10">Experience Description : </label>
+                                <div id="descriptionExp10">
+                                    <input oninput="document.getElementById('expB0').textContent = this.value;"
+                                        type="text" id="desExp10" placeholder="Some Description" class="form-control">
+                                </div>
+                                <div style="width: 1000px;" class="text-center">
+                                    <button onclick="moreCmp10();" id="skillBtn" style="float: left;"
+                                        class="btn btn-secondary btn-sm mt-2">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="container-fluid text-center m-5">
+                            <button onclick="document.getElementById('coursesDetails').style.display = 'block';
+                            document.getElementById('expDetails').style.display = 'none';" id="prevBtn"
+                                style="float: left;" class="btn btn-danger btn-lg">Prev</button>
+                            <button onclick="document.getElementById('projDetails').style.display = 'block';
+                                             document.getElementById('expDetails').style.display = 'none';"
+                                id="nextBtn" class="btn btn-danger btn-lg">Next</button>
+                        </div>
+                    </div>
+
+
+                    <!-- PROJECTS -->
+                    <div style="display: none;" id="projDetails">
+
+                        <h3 class="mt-4 mb-4">Projects</h3>
+
+                        <div class="form-group">
+                            <label for="nameProj">Project Name : </label>
+                            <input
+                                oninput="document.getElementById('nameProjSec').textContent = this.value; document.getElementById('nameProjSec').style.textTransform = 'Uppercase';"
+                                type="text" id="nameProj" placeholder="Enter Project Name" class="form-control">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="typeProj">Project Type : </label>
+                            <input oninput="document.getElementById('typeProjSec').textContent = this.value + ' | ';"
+                                type="text" id="typeProj" placeholder="Enter Project Type" class="form-control">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="liveProj">Project Live : </label>
+                            <input oninput="document.getElementById('liveProjSec').textContent = this.value;"
+                                type="text" id="liveProj" placeholder="Project Live Name" class="form-control">
+                            <input oninput="document.getElementById('liveProjSec').href = this.value;" type="url"
+                                id="liveURLProj" placeholder="Project Live URL" class="form-control mt-3">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="linkProj">Project Link : </label>
+                            <input oninput="document.getElementById('linkProjSec').textContent = this.value;"
+                                type="text" id="linkProj" placeholder="Project Link Name" class="form-control">
+                            <input oninput="document.getElementById('linkProjSec').href = this.value;" type="url"
+                                id="linkURLProj" placeholder="Project Link URL" class="form-control mt-3">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="desProj0">Project Description : </label>
+                            <div id="projSec">
+                                <input oninput="document.getElementById('projA0').textContent = this.value;" type="text"
+                                    id="desProj0" placeholder="Describe Project" class="form-control">
+                            </div>
+
+                            <div style="width: 1000px;" class="text-center mb-5">
+                                <button onclick="moreProj();" id="skillBtn" style="float: left;"
+                                    class="text-right btn btn-secondary btn-sm mt-2">Add</button>
+                                <button
+                                    onclick="document.getElementById('newProj').style.display = 'block'; this.style.display = 'none';"
+                                    id="addProjSec" class="btn btn-warning btn-md mt-2">+1 Project</button>
+                            </div>
+                        </div>
+
+                        <!-- NAYA WALA AGAIN... -->
+                        <div id="newProj" style="display: none;">
+                            <div class="form-group">
+                                <label for="nameProj1">Project Name : </label>
+                                <input
+                                    oninput="document.getElementById('nameProjSecX').textContent = this.value; document.getElementById('nameProjSecX').style.textTransform = 'Uppercase';"
+                                    type="text" id="nameProj1" placeholder="Enter Project Name" class="form-control">
+                            </div>
+
+                            <div class="form-group mt-4">
+                                <label for="typeProj1">Project Type : </label>
+                                <input
+                                    oninput="document.getElementById('typeProjSecX').textContent = this.value + ' | ';"
+                                    type="text" id="typeProj1" placeholder="Enter Project Type" class="form-control">
+                            </div>
+
+                            <div class="form-group mt-4">
+                                <label for="liveProj1">Project Live : </label>
+                                <input oninput="document.getElementById('liveProjSecX').textContent = this.value;"
+                                    type="text" id="liveProj1" placeholder="Project Live Name" class="form-control">
+                                <input oninput="document.getElementById('liveProjSecX').href = this.value;" type="url"
+                                    id="liveURLProj1" placeholder="Project Live URL" class="form-control mt-3">
+                            </div>
+
+                            <div class="form-group mt-4">
+                                <label for="linkProj1">Project Link : </label>
+                                <input oninput="document.getElementById('linkProjSecX').textContent = this.value;"
+                                    type="text" id="linkProj1" placeholder="Project Link Name" class="form-control">
+                                <input oninput="document.getElementById('linkProjSecX').href = this.value;" type="url"
+                                    id="linkURLProj1" placeholder="Project Link URL" class="form-control mt-3">
+                            </div>
+
+                            <div class="form-group mt-4">
+                                <label for="desProj10">Project Description : </label>
+                                <div id="projSec1">
+                                    <input oninput="document.getElementById('projB0').textContent = this.value;"
+                                        type="text" id="desProj10" placeholder="Describe Project" class="form-control">
+                                </div>
+                                <button onclick="moreProj2();" id="skillBtn"
+                                    class="text-right btn btn-secondary btn-sm mt-2">Add</button>
+                            </div>
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="container-fluid text-center m-5">
+                            <button onclick="document.getElementById('expDetails').style.display = 'block';
+                            document.getElementById('projDetails').style.display = 'none';" id="prevBtn"
+                                style="float: left;" class="btn btn-danger btn-lg">Prev</button>
+                            <button onclick="document.getElementById('achievements').style.display = 'block';
+                                             document.getElementById('projDetails').style.display = 'none';"
+                                id="nextBtn" class="btn btn-danger btn-lg">Next</button>
+                        </div>
+                    </div>
+
+
+                    <!-- ACHIEVEMENTS -->
+                    <div style="display: none;" id="achievements">
+
+                        <h3 class="mt-4 mb-4">Achievements</h3>
+
+                        <div class="form-group">
+                            <label for="takeAchievements mb-1">Showcase Achievements : </label>
+                            <div id="achieveSec">
+                                <input oninput="document.getElementById('ach0').textContent = this.value;" type="text"
+                                    id="achievementsSec" placeholder="Achivements are..." class="form-control">
+                            </div>
+                            <button onclick="moreAchieve();" id="skillBtn"
+                                class="text-right btn btn-secondary btn-sm mt-2">Add</button>
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="container-fluid text-center m-5">
+                            <button onclick="document.getElementById('projDetails').style.display = 'block';
+                                                document.getElementById('achievements').style.display = 'none';"
+                                id="prevBtn" style="float: left;" class="btn btn-danger btn-lg">Prev</button>
+                            <button onclick="submitResume();" id="submitBtn"
+                                class="btn btn-danger btn-lg">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SECTION II -->
+            <div class="container border col-md-4" id="resume-template">
+
+                <!-- HEAD PART -->
+                <div class="row" id="headPart">
+                    <div class="col-md-12 text-center mt-1">
+                        <h1 id="uName" class="mt-1">Om <strong>Chaudhari</strong></h1>
+                        <a id="uMail" style="font-size: 10px;" href="#">omchoudhari17@gmail.com</a>
+                        <p id="uMob" style="display: inline-block; font-size: 10px;">| +91 9307558876</p>
+                    </div>
+                    <hr>
+                </div>
+
+                <!-- BODY PART -->
+                <div class="row">
+
+                    <!-- First Column -->
+                    <div class="col-md-5">
+
+                        <!-- EDUCATION COMPONENT my-4-->
+                        <div class="eduSection">
+                            <h4 class="text-secondary">EDUCATION</h4>
+                            <div class="eduSec">
+                                <p><strong id="clgSec">SIPNA COLLEGE OF ENGINEERING AND TECHNOLOGY, AMRAVATI.</strong><br>
+                                    <span style="font-size: 8px;"><b id="clgBranchSec">BE | IT</b></span><br>
+                                    <span class="text-secondary" id="clgYearSec">2020-2024</span><br>
+                                    <b id="clgCGPASec">CGPA: 8.2/10 (5th Sem.)</b><br>
+                                    <span class="text-secondary" id="clgCitySec">Amravati, Maharashtra</span>
+                                </p>
+                            </div>
+                            <div class="eduSec">
+                                <p><strong id="hscSec">BRIJLAL BIYANI SCIENCE COLLEGE, AMRAVATI.</strong><br>
+                                    <span class="text-secondary" id="hscYear">2018-2020</span><br>
+                                    <b id="hscCGPA">Percentage :- 77%</b><br>
+                                    <span class="text-secondary" id="hscCity">Amravati, Maharashtra</span>
+                                </p>
+                            </div>
+                            <div class="eduSec">
+                                <p><strong id="sscSec">GOLDEN KIDS ENGLISH HIGH SCHOOL.</strong><br>
+                                    <span class="text-secondary" id="sscYear">2017-2018</span><br>
+                                    <b id="sscCGPA">Percentage :- 90%</b><br>
+                                    <span class="text-secondary" id="sscCity">Amravati, Maharashtra</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- LINKS COMPONENT my-4-->
+                        <div class="linkSection">
+                            <h4 class="text-secondary">LINKS</h4>
+                            <p class="text-secondary">Github: <a id="statGithub" href="">omchaudhari1702</a><br>
+                                LinkedIn: <a id="statLinkedin" href="#">Om Chaudhari</a><br>
+                                <!-- CodeChef: <a id="statCodechef" href="#">ommmyy17</a><br>
+                                Codeforces: <a id="statCodeforces" href="#">executeOne_17</a><br>
+                                LeetCode: <a id="statLeetCode" href="#">omch_17</a><br> -->
+                                Portfolio: <a id="statPortfolio" href="#">OmDEV</a></p>
+                        </div>
+
+                        <!-- SKILL COMPONENT my-4-->
+                        <div class="skillSection">
+                            <h4 class="text-secondary">SKILLS</h4>
+                            <div class="skillset">
+                                <p><strong>PROGRAMMING</strong></p>
+                                <ul>
+                                    <li id="prg0"><b>C++</b>, Java</li>
+                                    <li id="prg1">C, Python (Beginner)</li>
+                                    <li id="prg2"><b>Data Structures</b></li>
+                                    <li id="prg3">Algorithms</li>
+                                </ul>
+                            </div>
+                            <div class="skillset">
+                                <p><strong>WEB TECHNOLOGIES</strong></p>
+                                <ul>
+                                    <li id="web0">HTML, CSS, <b>JavaScript</b></li>
+                                    <li id="web1">Bootstrap, <b>React.js</b>, AJAX</li>
+                                    <li id="web2">MySQL, Firebase</li>
+                                </ul>
+                            </div>
+                            <div class="skillset">
+                                <p><strong>TOOLS</strong></p>
+                                <ul>
+                                    <li id="tool0"><b>VS Code</b>, CodeBlocks</li>
+                                    <li id="tool1">Eclipse, Git/Github</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- COURSES COMPONENT my-4-->
+                        <div class="coursesSection">
+                            <h4 class="text-secondary">COURSES</h4>
+                            <div class="coursesSec">
+                                <p><strong>UNDERGRADUATE</strong></p>
+                                <ul>
+                                    <li id="course0"><b>Algorithm Design And Analysis</b></li>
+                                    <li id="course1">Object Oriented Programming</li>
+                                    <li id="course2"><b>Data Structure and Algorithms</b></li>
+                                    <li id="course3">Database Management System</li>
+                                    <li id="course4">Operating System</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Second Column -->
+                    <div class="col-md-7">
+
+                        <!-- EXPERIENCE COMPONENT my-4-->
+                        <div class="expSection">
+                            <h4 class="text-secondary">EXPERIENCE</h4>
+                            <div class="expSec">
+                                <p><strong id="cmpSec">FRESH GRAVITY | </strong> <a id="cmpRoleSec" href="">SOFTWARE
+                                        DEVELOPER
+                                        INTERN</a><br>
+                                    <span id="cmpYearSec" class="text-secondary">January,2022 - July,2022 (Expected) |
+                                    </span>
+                                    <span id="cmpLocSec">Pune,India</span><br>
+                                <ul>
+                                    <li id="expA0">Design and build modern <b>Data pipelines</b> and <b>Data streams</b>
+                                        using
+                                        <b>ETL</b>
+                                    </li>
+                                    <li id="expA1"> <b>Integrate</b>, <b>Transform</b> and Consolidate data from various
+                                        <b>structured</b>
+                                        and
+                                        <b>unstructured</b> data that are suitable for analytics implementation.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="expSec">
+                                <p><strong id="cmpSec1">BLUELEARN |</strong> <a id="cmpRoleSec1" href="">MENTOR</a><br>
+                                    <span id="cmpYearSec1" class="text-secondary">March,2021 - June,2021 | </span>
+                                    <span id="cmpLocSec1">Remote,India</span><br>
+                                <ul>
+                                    <li id="expB0">Helped <b>100+</b> students by clearing their doubts in Competitive
+                                        Programming
+                                        and <b>Data Structures and Algorithms</b>.
+                                    </li>
+                                    <li id="expB1">Debugged <b>20K+</b> lines of code in <b>C++ and JAVA</b> and took
+                                        <b>10</b>
+                                        online
+                                        doubt
+                                        solving sessions.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- PROJECT COMPONENT my-4-->
+                        <div class="projectSection">
+                            <h4 class="text-secondary">PROJECTS</h4>
+                            <div class="projectSec">
+                                <p><strong id="nameProjSec">CODING BUDDY</strong><br>
+                                    <span id="typeProjSec">Chrome Extension |</span> <a id="liveProjSec" href="">Project
+                                        Link</a> | <a id="linkProjSec" href="">Github
+                                        Link</a><br>
+                                <ul>
+                                    <li id="projA0">It displays live and upcoming <b>Programming Contests</b> happening
+                                        on various
+                                        popular
+                                        platforms.</li>
+                                    <li id="projA1">Supported Platforms : <b>CodeChef ,CodeForces ,LeetCode</b>,
+                                        HackerEarth,Hackerrank
+                                        and
+                                        many more.</li>
+                                    <li id="projA2">It has a <b>5*</b> Rating on Chrome Web Store & <b>3000+
+                                            Downloads.</b></li>
+                                    <li id="projA3">Used : HTML , CSS , <b>JavaScript and Bootstrap.</b></li>
+                                </ul>
+                            </div>
+                            <div class="projectSec">
+                                <p><strong id="nameProjSecX">LEARN & GROW</strong><br>
+                                    <span id="typeProjSecX">Educational Website | </span> <a id="liveProjSecX"
+                                        href="">Github Link</a> | <a id="linkProjSecX" href="">Github
+                                        Link</a><br>
+                                <ul>
+                                    <li id="projB0">It is an <b>E-learning Platform</b> that includes all forms of
+                                        electronically
+                                        supported
+                                        learning and teaching.</li>
+                                    <li id="projB1">It helps beginners to ace programming by learning <b>Web Development
+                                            and
+                                            Competitive
+                                            Programming.</b></li>
+                                    <li id="projB2">Used: HTML, CSS , JavaScript, <b>ReactJS</b> for building.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- ACHIEVEMENTS COMPONENT my-4-->
+                        <div class="achSection">
+                            <h4 class="text-secondary">ACHIEVEMENTS</h4>
+                            <ul>
+                                <li id="ach0">Qualified for <b>ACM-ICPC'20</b> Regionals with <b>453rd Rank</b> in
+                                    Regional.
+                                    <a href="#">(Certificate)</a>
+                                </li>
+                                <li id="ach1">Achived <b>4*</b> with a max Rating of <b>1833</b> on CodeChef</li>
+                                <li id="ach2">Reached <b>Pupil</b> with a max Rating of <b>1359</b> on Codeforces</li>
+                                <li id="ach3">Secured Rank <b>249th</b> in April CodeChef Starter out of <b>20K+</b>
+                                    participants.</li>
+                                <li id="ach4">Got <b>1993rd</b> Rank in Codeforces Round 729 out of <b>24K+</b>
+                                    participants.</li>
+                                <li id="ach5">Achieved <b>Rank 1</b> in GCOEA with a score of <b>950</b> out of
+                                    <b>250+</b>
+                                    students
+                                    on GFG. <a href="#">(Profile)</a>
+                                </li>
+                                <li id="ach6">Solved over <b>300+</b> Problems on <b>LeetCode</b> and Geeks for Geeks.
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="downloadBtn" onclick="downloadResume();" style="display: none; margin: 50px;"
+                    class="btn btn-danger btn-lg">
+                    Download!
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- GENERATE BUTTON -->
+    <!-- <div class="container text-center m-4">
+        <button class="btn btn-danger btn-lg">Generate Resume</button>
+    </div> -->
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    <!-- JS Vanilla -->
+    <script src="/ResumeTemplate/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- NO Script-->
+    <noscript>Sorry, your browser does not support JavaScript!...</noscript>
+</body>
+
+</html>

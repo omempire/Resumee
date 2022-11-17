@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+
+#header
+{
+    margin: 20px;
+}
+
+#resume-form
+{
+    display: block;
+    margin-top: 3%;
+    margin-left: -20px;
+    margin-right: 0;
+}
+
+.flex
+{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 776px)
+{
+    #resume-form
+    {
+        margin-left: 0;
+    }
+}
+
+/* RESUME INPUT FORM */
+
+#ResumeTemplateMain
+{
+    margin-top: 40px;
+}
+
+#ResumeTemplateMain input
+{
+    width: 70%;
+}
+
+#ResumeTemplateMain textarea
+{
+    width: 70%;
+}
+
+#colFirst
+{
+    margin-left: 40px;
+    margin-top: 60px;
+}
+
+#colSecond
+{
+    margin-left: -100px;
+}
+
+
+
+
+/* RESUME TEMPLATE */
+
+#resume-template
+{
+    font-family: 'Open Sans', sans-serif;
+    width: 422px;
+    height: 840px;
+    font-size: 5px;
+    margin: 0;
+    margin-left: -60px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+#resume-template h1 {font-size: 20px;}
+
+#resume-template h4 {font-size: 10px;}
+
+#resume-template span {font-size: 8px;}
+
+#resume-template p {font-size: 8px;}
+
+#resume-template ul {font-size: 8px;}
+
+#resume-template a
+{
+    text-decoration: none;
+}
+
+@media (max-width: 776px)
+{
+    #resume-template
+    {
+        margin-left: 0;
+        height: auto;
+    }
+}
