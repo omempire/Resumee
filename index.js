@@ -98,7 +98,7 @@ let people = [
 		photo:
 			"url('https://cdn.pixabay.com/photo/2014/10/30/17/32/boy-509488_960_720.jpg')",
 		name: "Prajyot Chambare",
-		profession: "PROFESSIONAL CHILD",
+		profession: "HOLLYWOOD ACTOR",
 		description:
 			"Biscuit chocolate pastry topping lollipop pie. Sugar plum brownie halvah dessert tiramisu tiramisu gummi bears icing cookie. Gummies gummi bears pie apple pie sugar plum jujubes. Oat cake croissant bear claw tootsie roll caramels. Powder ice cream caramels candy tiramisu shortbread macaroon chocolate bar. Sugar plum jelly-o chocolate dragée tart chocolate marzipan cupcake gingerbread."
 	}
